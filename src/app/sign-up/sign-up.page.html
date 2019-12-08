@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="stacked">Pseudo</ion-label>
+        <ion-input [(ngModel)]="signupData.pseudo"
+       placeholder="Entrez votre pseudo"></ion-input>
+       </ion-item>
+       <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input [(ngModel)]="signupData.email"
+         placeholder="Entrez votre email"></ion-input>
+         </ion-item>
+       <ion-item>
+        <ion-label position="stacked">Bio</ion-label>
+        <ion-textarea [(ngModel)]="signupData.bio"
+       placeholder="Ajoutez votre bio"></ion-textarea>
+       </ion-item>
+       <ion-item>
+        <ion-label position="stacked">Lien</ion-label>
+        <ion-input [(ngModel)]="signupData.link"
+       placeholder="Ajoutez un lien"></ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-label position="stacked">Mot de passe</ion-label>
+        <ion-input [(ngModel)]="signupData.password"
+       type="password" placeholder="Entrez votre mot de passe">
+      </ion-input>
+       </ion-item>
+       <div class="padding">
+          <ion-button (click)="signUp()" shape="round" expand="block"
+         color="primary">Créer mon compte</ion-button>
+       </div>
+</ion-content>

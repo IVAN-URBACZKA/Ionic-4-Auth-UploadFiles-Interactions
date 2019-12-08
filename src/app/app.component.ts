@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +13,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   constructor(
+    private router: Router,
+    public afAuth: AngularFireAuth,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
@@ -20,6 +24,14 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.afAuth.authState.subscribe(auth => {
+        if (!auth) {
+          this.router.navigateByUrl('/login');
+          console.log('non connecté');
+          } else { 
+            console.log('Connecté: ' + auth.uid);
+          }     
+        });
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
