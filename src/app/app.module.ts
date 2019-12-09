@@ -14,6 +14,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+import { Camera } from '@ionic-native/camera/ngx';
+
+
 export const firebaseConfig = {
   apiKey: "AIzaSyCTcShAGqN4Cz6mThgd2kLuMTtwNgSEsSo",
   authDomain: "instagram-93197.firebaseapp.com",
@@ -34,10 +37,12 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireStorageModule],
+    AngularFireStorageModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

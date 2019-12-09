@@ -2,3 +2,19 @@
 {
     padding: 5%;
 }
+
+.flex{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+   }
+   .img-box{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+   }
+   .flex img{
+    height: 100px;
+    width: 100px;
+   }

@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'new',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../new/new.module').then(m => m.NewPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="warning">
+     <ion-title>Nouvelle publication</ion-title>
+    </ion-toolbar>
+    </ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label position="stacked">Description</ion-label>
+        <ion-textarea [(ngModel)]="postData.description" placeholder="Ajoutez une description"></ion-textarea>
+       </ion-item>
+
+       <ion-button  (click)="addPhoto()" fill="clear" expand="block" color="primary">Ajouter une photo</ion-button>
+        <ion-button  (click)="addPhoto()" fill="clear"  expand="block" color="primary">Modifier la photo</ion-button>
+
+       <img [src]="image" *ngIf="image">
+
+       <ion-button (click)="publish()" expand="block" color="primary">Publier le post</ion-button>
+
+       <ion-button (click)="doc()" expand="block" color="primary">doc</ion-button>
+
+
+     
+
+
+</ion-content>
