@@ -16,18 +16,6 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { Camera } from '@ionic-native/camera/ngx';
 
-
-export const firebaseConfig = {
-  apiKey: "AIzaSyCTcShAGqN4Cz6mThgd2kLuMTtwNgSEsSo",
-  authDomain: "instagram-93197.firebaseapp.com",
-  databaseURL: "https://instagram-93197.firebaseio.com",
-  projectId: "instagram-93197",
-  storageBucket: "instagram-93197.appspot.com",
-  messagingSenderId: "875217833026",
-  appId: "1:875217833026:web:bf3cb0fadfa657836671db"
-};
-
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
